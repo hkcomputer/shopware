@@ -110,7 +110,7 @@ class BatchProductNumberSearch
 
         $this->pointer[$key] = 0;
 
-        return array_merge($items, $this->getBaseProductsRange($key, $baseProducts, $missingItems));
+        return $items + $this->getBaseProductsRange($key, $baseProducts, $missingItems);
     }
 
     /**
